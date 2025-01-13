@@ -1,9 +1,9 @@
 def compare(first_values, second_values):
 
-    a = list(first_values.keys())
-    b = list(second_values.keys())
+    dict_1 = list(first_values.keys())
+    dict_2 = list(second_values.keys())
 
-    if a != b:
+    if dict_1 != dict_2:
         return False
-    return all(first_values[c] == second_values[c] for c in a)
+    return all(first_values[key] == second_values[key] for key in dict_1)
 
